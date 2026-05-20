@@ -43,9 +43,12 @@
 
 ## 💻 Panduan Instalasi & Konfigurasi
 
-### 1. Kloning atau Salin File Proyek
-Ekstrak atau letakkan folder proyek ini ke dalam direktori web server lokal Anda:
-* Jika menggunakan XAMPP di Windows: `C:\xampp\htdocs\gunungku`
+### 1. Kloning Proyek
+Buka terminal/command prompt pada direktori web server lokal Anda (misalnya `C:\xampp\htdocs\`) lalu jalankan perintah berikut untuk mengkloning repositori ini:
+```bash
+git clone https://github.com/fathan3/gunungku.git
+cd gunungku
+```
 
 ### 2. Import Database
 1. Jalankan panel kontrol XAMPP dan aktifkan modul **Apache** dan **MySQL**.
@@ -64,10 +67,6 @@ Untuk menggunakan fitur chatbot AI:
    ];
    ```
    *(Catatan: Berkas `config/gemini.php` telah ditambahkan ke `.gitignore` sehingga API Key Anda aman dari eksposur publik saat didorong ke GitHub).*
-
-### 4. Akses Aplikasi
-Buka browser Anda dan akses tautan berikut:
-👉 [http://localhost/gunungku/](http://localhost/gunungku/)
 
 ---
 
@@ -89,12 +88,12 @@ Untuk menguji fitur-fitur di dalam aplikasi, Anda dapat menggunakan akun demo be
 ```text
 gunungku/
 ├── api/
-│   ├── gemini.php                # Handler backend untuk API Gemini (cURL)
-│   └── gemini.example.php        # Template konfigurasi API Gemini
+│   └── gemini.php                # Handler backend untuk API Gemini (cURL)
 ├── assets/                       # Aset CSS, JS, dan gambar pendukung
 ├── config/
 │   ├── database.php              # Pengaturan koneksi database MySQL
-│   └── gemini.php                # Konfigurasi API Key (Diabaikan oleh git)
+│   ├── gemini.php                # Konfigurasi API Key (Diabaikan oleh git)
+│   └── gemini.example.php        # Template konfigurasi API Gemini
 ├── includes/                     # Komponen reusable (Header, Footer, Navbar)
 ├── pages/                        # Halaman fungsional (Chatbot, Simaksi, Komunitas, dll.)
 ├── index.php                     # Router dan gerbang utama aplikasi
